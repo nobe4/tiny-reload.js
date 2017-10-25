@@ -6,7 +6,7 @@ Watch a set of URLs and reload the page when one changes.
 
 # How-to
 
-See [https://github.com/nobe4/tiny-reload.js/blob/master/index.html] or 
+See [index.html](https://github.com/nobe4/tiny-reload.js/blob/master/index.html) or
 
 ```html
 <body>
