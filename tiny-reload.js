@@ -15,7 +15,7 @@
   }
 
   function watchURL(URL, timeout, debug, previousHash = "") {
-    if (debug) console.log("Watching", URL, hash, previousHash);
+    if (debug) console.log("Watching", URL, previousHash);
 
     getHash(URL)
       .then((hash) => {
