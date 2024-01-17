@@ -6,7 +6,10 @@
       fetch(URL)
         .then((response) => (response.ok ? response.blob() : undefined))
         .then((b) => new Response(b).arrayBuffer())
-        .then((a) => resolve(new Uint8Array(a).reduce((a, b) => a + b)))
+        // Ref: https://stackoverflow.com/a/7616484
+        .then((a) =>
+          resolve(new Uint8Array(a).reduce((a, b) => ((a << 5) - a + b) | 0)),
+        )
         .catch(reject);
     });
   }
